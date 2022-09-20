@@ -1,0 +1,31 @@
+body{
+    background-color: royalblue;
+    margin: 0;
+    main{
+        border: 2px dashed red;
+        header{
+            .city{
+                border: 2px dashed blue;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .mainInfo{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    img{
+                        max-width: 3rem;
+                    }
+                    h2{
+                        margin:0;
+                    }
+                }
+
+            }
+        }    
+        .content{
+            border: dashed green;
+        }
+    }
+
+  }
