@@ -1,15 +1,14 @@
 body {
-  background-color: royalblue;
+  background-color: rgba(130, 161, 255, 0.603);
   margin: 0;
 }
-body main {
-  border: 2px dashed red;
-}
 body main header .city {
-  border: 2px dashed blue;
+  background-color: rgb(217, 226, 248);
+  background-image: linear-gradient(360deg, rgb(217, 226, 248) 0%, rgb(44, 75, 161) 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem;
 }
 body main header .city .mainInfo {
   display: flex;
@@ -23,5 +22,27 @@ body main header .city .mainInfo h2 {
   margin: 0;
 }
 body main .content {
-  border: dashed green;
+  background-color: rgb(217, 226, 248);
+  background-image: linear-gradient(180deg, rgb(217, 226, 248) 23%, rgb(44, 75, 161) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .content #range {
+  margin-top: 2rem;
+  width: 40%;
+  transform: scale(2);
+}
+body main .content .cube {
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  width: 80%;
+  text-align: center;
+}
+body main .content .cube h3, body main .content .cube h4 {
+  margin: 0;
+}
+body main .content .cube .weatherMain .minMax {
+  display: flex;
+  justify-content: center;
 }

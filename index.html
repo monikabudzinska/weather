@@ -21,6 +21,31 @@
             </div>
         </header>
     <div class="content">
+        <input 
+        type="range"  
+        id="range" 
+        min="0" 
+        max="39" 
+        onchange="changeCubeInfo(this.value)"
+        onmousemove="changeCubeInfo(this.value)"
+        />
+
+        <div class="cube">
+            <h3>
+                <span>dt_txt</span>
+                <h4>description</h4>
+                <img src="https://openweathermap.org/img/wn/10n.png" alt="IMG OF WEATHER">
+            </h3>
+            <div class="weatherMain">
+                <h3>feels_like</h3>
+                <div class="minMax">
+                    <div class="min">temp_min</div>
+                    <span> - </span>
+                    <div class="max">temp_max</div>
+                </div>
+            </div>
+
+        </div>
         
     </div>
     </main>
