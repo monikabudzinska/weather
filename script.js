@@ -51,7 +51,7 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?lat=38.345996&lon=-0.490
 const changeCubeInfo = index=>{
     console.log(('list', list))
     console.log('index', index)
-    document.querySelector(".cube h4").innerText = list[index].weather[0].description;
+    document.querySelector(".cube p").innerText = list[index].weather[0].description;
     document.querySelector('.cube h3 span').innerHTML = list[index].dt_txt;
     document.querySelector('.cube h3 img').src = 
     `https://openweathermap.org/img/wn/${list[index].weather[0].icon}.png`;

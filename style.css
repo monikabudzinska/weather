@@ -39,7 +39,7 @@ body main .content .cube {
   width: 80%;
   text-align: center;
 }
-body main .content .cube h3, body main .content .cube h4 {
+body main .content .cube h3, body main .content .cube p {
   margin: 0;
 }
 body main .content .cube .weatherMain .minMax {
