@@ -14,8 +14,8 @@ function timeConverter(UNIX_timestamp){
 let list = []
 
 const getWeatherInfo = (lat, lon)=>{
-    // fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=6f8c4e83638c34920aa20a82b6705814&units=metric&lang=pl`)
-    fetch(`https://raw.githubusercontent.com/apietryga/kurs/master/api/weather/info/lat%3D${lat}%26lon%3D${lon}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=6f8c4e83638c34920aa20a82b6705814&units=metric&lang=pl`)
+    // fetch(`https://raw.githubusercontent.com/apietryga/kurs/master/api/weather/info/lat%3D${lat}%26lon%3D${lon}`)
     
     .then((res) => res.json())
     .then((res) => {
@@ -59,9 +59,9 @@ const changeCubeInfo = index=>{
 const getLatLonDependOfName = ()  => {
     const value = document.querySelector('#location').value
     document.querySelector('#location').value = ""
-    // fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&appid=6f8c4e83638c34920aa20a82b6705814`)
+    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&appid=6f8c4e83638c34920aa20a82b6705814`)
     
-    fetch(`https://raw.githubusercontent.com/apietryga/kurs/master/api/weather/location/${value.toLowerCase()}`)
+    // fetch(`https://raw.githubusercontent.com/apietryga/kurs/master/api/weather/location/${value.toLowerCase()}`)
     .then(res =>res.json())
     .then(res =>{
      
