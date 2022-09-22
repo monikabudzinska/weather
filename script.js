@@ -77,3 +77,16 @@ document.addEventListener("keydown", e=> {
     }
 
 })
+
+document.addEventListener("wheel", e => {
+    if(e.deltaY<0){
+        document.querySelector("#range").value--
+    }
+
+    else{document.querySelector("#range").value++
+    }
+
+    changeCubeInfo(document.querySelector("#range").value)
+    
+
+})
