@@ -14,11 +14,10 @@ function timeConverter(UNIX_timestamp){
 let list = []
 
 const getWeatherInfo = (lat, lon)=>{
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=-${lon}&appid=6f8c4e83638c34920aa20a82b6705814&units=metric&lang=pl`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=6f8c4e83638c34920aa20a82b6705814&units=metric&lang=pl`)
     .then((res) => res.json())
     .then((res) => {
 
-     getWeatherInfo = (res[0].let, res[0].lon)   
     document.querySelector(".city h2").innerText = res.city.name;
     document.querySelector("img").src = "https://countryflagsapi.com/svg/"  + res.city.country
     document.querySelector(".city .sunrise").innerText = timeConverter( res.city.sunrise);
@@ -56,10 +55,12 @@ const changeCubeInfo = index=>{
 
 const getLatLonDependOfName = ()  => {
     const value = document.querySelector('#location').value
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&appid={API key}`)
+    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&appid=6f8c4e83638c34920aa20a82b6705814`)
     .then(res =>res.json())
     .then(res =>{
-        
+     
+    getWeatherInfo  (res[0].lat, res[0].lon)   
+
 
     })
 }
