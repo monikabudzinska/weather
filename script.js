@@ -59,7 +59,7 @@ const changeCubeInfo = index=>{
 const getLatLonDependOfName = ()  => {
     const value = document.querySelector('#location').value
     document.querySelector('#location').value = ""
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&appid=6f8c4e83638c34920aa20a82b6705814`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${value}&appid=6f8c4e83638c34920aa20a82b6705814`)
     
     // fetch(`https://raw.githubusercontent.com/apietryga/kurs/master/api/weather/location/${value.toLowerCase()}`)
     .then(res =>res.json())
