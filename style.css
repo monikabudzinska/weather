@@ -1,9 +1,10 @@
 body {
-  background-color: rgba(130, 161, 255, 0.603);
+  background-color: rgb(251, 207, 40);
+  background-image: url(https://wallpaperaccess.com/full/1778997.jpg);
+  background-size: 100%;
+  background-position: left top;
+  background-repeat: repeat;
   margin: 0;
-}
-body main header {
-  background-color: royalblue;
 }
 body main header .city {
   background-color: rgb(217, 226, 248);
