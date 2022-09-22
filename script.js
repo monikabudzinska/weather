@@ -13,29 +13,22 @@ function timeConverter(UNIX_timestamp){
 
 let list = []
 
-fetch('https://api.openweathermap.org/data/2.5/forecast?lat=38.345996&lon=-0.490686&appid=6f8c4e83638c34920aa20a82b6705814&units=metric&lang=pl')
-.then((res) => res.json())
-.then((res) => {
-   // console.log(res)
+const getWeatherInfo = (lat, lon)=>{
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=-${lon}&appid=6f8c4e83638c34920aa20a82b6705814&units=metric&lang=pl`)
+    .then((res) => res.json())
+    .then((res) => {
+
+     getWeatherInfo = (res[0].let, res[0].lon)   
     document.querySelector(".city h2").innerText = res.city.name;
     document.querySelector("img").src = "https://countryflagsapi.com/svg/"  + res.city.country
     document.querySelector(".city .sunrise").innerText = timeConverter( res.city.sunrise);
     document.querySelector(".city .sunset").innerText = timeConverter( res.city.sunset);
     
-    // console.log(res.list)
-    // makeWeatherCube(res.list[0])
-    // makeWeatherCube(res.list[1])
-    // makeWeatherCube(res.list[2])
-    // makeWeatherCube(res.list[3])
-    // makeWeatherCube(res.list[4])
-    // for(const cube of res.list){
-    //     makeWeatherCube(cube)
-    // }
+ 
     list = res.list
     changeCubeInfo(0)
-
 })
-
+}
 // const makeWeatherCube = params => {
 //     //console.log(params)
 //     const cube = document.createElement ('div')
@@ -61,4 +54,14 @@ const changeCubeInfo = index=>{
     document.querySelector(" .minMax .max").innerText = list[index].main.temp_max + "°C"
 }
 
+const getLatLonDependOfName = ()  => {
+    const value = document.querySelector('#location').value
+    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&appid={API key}`)
+    .then(res =>res.json())
+    .then(res =>{
+        
 
+    })
+}
+
+getLatLonDependOfName()
