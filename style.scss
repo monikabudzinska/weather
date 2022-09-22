@@ -1,6 +1,7 @@
 body{
-    font-family: 'Anton', sans-serif;
-    background-color: rgb(251, 207, 40);
+    font-family: 'Lobster', cursive;
+    text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+    background-color: rgb(40, 82, 251);
     background-image:  url(https://wallpaperaccess.com/full/1778999.jpg);
     background-size: cover;
     background-position: left top;
@@ -8,39 +9,45 @@ body{
     margin: 0;
     min-height: 100vh;
     main{
-        padding: 5rem 5rem;
-        
+        padding: 2rem 2rem;
         header{
                     
             .city{
                 background-color: rgba(217, 226, 248, 1);
-                background-image: linear-gradient(360deg, rgba(217, 226, 248, 1) 0%, rgba(44, 75, 161, 1) 100%);
+                background-image: linear-gradient(360deg, rgba(217, 226, 248, 1) 0%, rgb(71, 159, 241) 100%);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 2rem;
-                border-radius: 40px 40px 0px 0px;
+                border-radius: 80px 80px 0px 0px;
                 .mainInfo{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     img{
-                        max-width: 3rem;
+                        max-width:7rem;
+                        padding: 1rem;
                     }
                     h2{
                         margin:0;
                     }
+                }
+                .sunset, .sunrise{
+                    text-align: center;
                 }
 
             }
         }    
         .content{
             background-color: rgba(217, 226, 248, 1);
-            background-image: linear-gradient(180deg, rgba(217, 226, 248, 1) 23%, rgba(44, 75, 161, 1) 100%);
+            background-image: linear-gradient(180deg, rgba(217, 226, 248, 1) 23%, rgba(71, 159, 241) 100%);
+            -webkit-box-shadow: 8px 39px 44px -11px rgba(66, 68, 90, 1);
+            -moz-box-shadow: 8px 39px 44px -11px rgba(66, 68, 90, 1);
+            box-shadow: 8px 39px 44px -11px rgba(66, 68, 90, 1);
             display: flex;
             flex-direction: column;
             align-items: center;
-            border-radius: 0px 0px 40px 40px;
+            border-radius: 0px 0px 80px 80px;
             #range{
                 margin-top: 2rem;
                 width: 40%;
@@ -66,4 +73,7 @@ body{
         }
     }
 
+  }
+  footer{
+    text-align: center;
   }
